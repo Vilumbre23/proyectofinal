@@ -1,0 +1,280 @@
+/*CSS barra top */
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: linear-gradient(aliceblue, rgb(146, 200, 236)); 
+}
+h1{
+    font-size: 50px;
+    font-weight:black;
+    margin-left:40px;
+font-family: 'Shadows Into Light', cursive;
+    }
+    img{
+        width:100%;
+    }
+.total{
+        display:grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        background: aliceblue;
+        font-family: sans-serif;
+        position:absolute;
+        top:0;
+        width:100%;
+        height:40px;
+        }
+        /* CSS BOTON */
+       .button1 {
+          --clr-font-main: hsla(0 0% 20% / 100);
+          --btn-bg-1: rgb(121, 211, 238);
+          --btn-bg-2: rgb(113, 247, 240);
+          --btn-bg-color: hsla(360 100% 100% / 1);
+          cursor: pointer;
+          padding: 0.9em 1.4em;
+          font-size: var(--size, 1rem);
+          font-family: "Segoe UI", system-ui, sans-serif;
+          font-weight: 500;
+          transition: 0.8s;
+           background-size: 280% auto;
+          background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+          border: none;
+          border-radius: 30%;
+          color: var(--btn-bg-color);
+          box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+        }
+        
+        .button1:hover {
+          background-position: right top;
+        }
+        
+        .button1:is(:focus, :focus-visible, :active) {
+          outline: none;
+          box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+        }
+        /* MEDIA QUERIES los cambios que se aplican son por los botones de buttones, h1, y total personajes*/
+        @media only screen and (max-width: 705px) {
+          .buttones {
+            margin-left:100px;
+          }
+        }
+        @media only screen and (max-width: 880px) {
+          .buttones {
+            margin-left:100px;
+          }
+          .total{
+            display:grid;
+        grid-template-columns: 1fr 1fr;
+          }
+        }
+        @media only screen and (max-width: 359px) {
+          .total{
+            display:flex;
+            flex-wrap: wrap;                        
+          }
+          .buttones{
+            margin-left:10px;
+          }
+        } 
+        @media only screen and (max-width: 333px) {
+          h1{
+                margin-left:10px;                  
+          }
+        } 
+        @media (prefers-reduced-motion: reduce) {
+          button {
+            transition: linear;
+          }
+        }
+
+
+        /*MEDIA QUERYS*/
+        /*button2*/
+        .botones {
+          padding: 10px 20px;
+          border: none;
+          font-size: 30px;
+          color: #fff;
+          border-radius: 60px;
+          letter-spacing: 5px;
+          font-weight: 700;
+          text-transform: uppercase;
+          transition: 0.5s;
+          transition-property: box-shadow;
+        }
+        
+        .botones {
+          background: rgb(92, 228, 103);
+          box-shadow: 0 0 25px rgb(125, 100, 238);
+        }
+        
+        .botones:hover {
+          box-shadow: 0 0 5px rgb(93, 155, 152),
+                      0 0 25px rgb(33, 36, 33),
+                      0 0 50px rgb(93, 192, 209),
+                      0 0 100px rgb(19, 31, 12);
+        }
+
+        /*BUITTON*/
+        .filtroTodo:hover, .filtroMujer:hover, .filtroHombre:hover {
+          box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+          transform: scale(1.05) rotate(-1deg);
+        }
+        .person{
+            margin-top:100px;
+                  }
+                  .total2{
+                    margin-left:30px;
+                  }
+        /* media query, arreglando person, total personajes. */
+        @media only screen and (max-width: 821px) {
+          .person {
+            margin-top:250px;        
+            }
+        }
+        @media only screen and (max-width: 335px) {
+          .person {
+            margin-top:340px;        
+            }
+        }
+        @media only screen and (max-width: 314px) {
+          .person {
+            margin-top:380px;        
+            }
+        }
+        @media only screen and (max-width: 294px) {
+          .person {
+            margin-top:450px;        
+            }
+        }
+        /*fin media */
+        #personajes {
+            display:grid;
+            padding: 10px;
+            grid-template-columns: repeat(4, 1fr);
+          grid-gap:30px;
+         align-items: center;  
+        }
+
+     /*AGREGADO/   /*AGREGADO/   /*AGREGADO/*/
+        .personaje{
+border-color: rgb(37, 228, 116);
+border-style: solid;
+border-radius: 30px;
+border-width:3px;
+        }
+      .personaje:hover {
+            transform: scale(1.05);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            cursor: pointer;
+            border-radius:30px; 
+                
+          }
+           
+        .card-image img {
+          display: block;
+          height: auto;   
+          
+      }
+
+      .card-image {
+        overflow: hidden;
+        border-radius: 30px;
+               
+      }
+    .card-image:hover img {
+            transform: scale(1.3);
+            transition-duration: 0.5s;
+            filter: grayscale(80%); 
+            }
+        .img:hover {
+            overflow: hidden;
+        }
+        .card-image {
+          overflow: hidden;
+         
+      }
+      .datos{
+        margin-left:20px;
+        font-size:14px;
+        font-family: 'Saira Semi Condensed', sans-serif;
+      }
+  a{ 
+    justify-content: center;
+    padding: 15px;
+    margin-left:10px;
+    font-family: sans-serif;
+    text-decoration: none;
+font-family: 'Shadows Into Light', cursive;
+font-size: 25px;
+    }
+    /*media queries arreglandoproblema de cartas,para que se ponga en 2 columas, y 1 columna*/
+    @media only screen and (max-width: 600px) {
+      #personajes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    } 
+    @media only screen and (max-width: 359px) {
+      #personajes {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      
+    } 
+    /*fin media queries*/
+              /*AGREGADO/*/
+          .total2{
+            margin-bottom:30px;
+            margin-top:100px;
+            
+          }
+          .pagifoot{
+            margin-top:70px;
+            text-align: center;
+            margin-bottom:30px;
+          }
+/*FOOTER*/
+        footer{
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: #161515;
+          width:100%;
+          padding-top: 40px;
+          color: #fff;
+      }
+      .footerc{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+ }
+ .footerc h3{
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+      .footerc p{
+          max-width: 500px;
+          margin: 10px auto;
+          line-height: 28px;
+          font-size: 14px;
+          color: #cacdd2;
+      } 
+      .footerb{
+        background-color:black;
+      }
+      .footerb p a{
+        color:#44bae8;
+        font-size: 16px;
+        text-decoration: none;
+        
+      }
+      .footerb span{
+          text-transform: uppercase;
+          opacity: .4;
+          font-weight: 200;
+      }
+      
+      /* TERMINA FOOTER*/

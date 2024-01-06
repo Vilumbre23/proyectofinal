@@ -1,8 +1,7 @@
 // elementos del HTML
 let divPersonajes = document.getElementById('personajes');
 
-
-    // botones filtro
+// botones filtro
 let botonFiltroTodo = document.getElementById('filtroTodo');
 let botonFiltroMujer = document.getElementById('filtroMujer');
 let botonFiltroHombre = document.getElementById('filtroHombre');
@@ -14,16 +13,16 @@ let botonAnteriorPagina = document.getElementById("anterior");
 let botonSiguientePagina = document.getElementById("siguiente");
 let botonUltimaPagina = document.getElementById('ultimaPagina'); 
 
+let spanCantidadPersonajes = document.getElementById('cantidadPersonajes');
 let totalPersonajes;
 let paginaActual=1;
 
 // funcion para mostrar los personajes en el html
 function mostrarEnElHtml (arrPersonajes) {
+    let numeroPersonajes = arrPersonajes.length;
+    spanCantidadPersonajes.innerText= numeroPersonajes;
     // estamos limpiando lo que habia antes en el div
-   
-   
-    divPersonajes.innerHTML = ""; 
-    
+    divPersonajes.innerHTML='';
     // ahora le agregamos los personajes nuevos que queres mostrar
     arrPersonajes.forEach((itemPersonaje)=>{
         
@@ -123,6 +122,9 @@ botonFiltrounknown.addEventListener('click',filtrounknown);
 
 botonPrimeraPagina.disabled=true;
 botonAnteriorPagina.disabled=true;
+document.querySelector('.botones1').style.background = 'gray';
+document.querySelector('.botones2').style.background = 'gray';
+
 
 
 // function controlPaginado (pagina){
@@ -139,44 +141,70 @@ function siguientePagina() {
     }else{
         botonAnteriorPagina.disabled=false;
         botonPrimeraPagina.disabled=false;
+        document.querySelector('.botones1').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones2').style.background = 'rgb(92, 228, 103)';
+
     }
     // se ejecuta el pedido fetch
     pedidoFetch(paginaActual);
 
 };
 
-
-
-function anteriorPagina (){
+function anteriorPagina(){
     paginaActual--;
     if(paginaActual===1){
         botonAnteriorPagina.disabled=true;
         botonPrimeraPagina.disabled=true;
+        document.querySelector('.botones1').style.background = 'gray';
+    document.querySelector('.botones2').style.background = 'gray';
     }else{
-        botonSiguientePagina.disabled= false;
-        botonUltimaPagina.disabled=false;
+        botonSiguientePagina.disabled= false;        
+        botonUltimaPagina.disabled=false;   
+        document.querySelector('.botones3').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones4').style.background = 'rgb(92, 228, 103)';   
     }
     pedidoFetch(paginaActual);
 };
 
 function primeraPagina(){
-    paginaActual=1
-    botonAnteriorPagina.disabled = true;
+    if(paginaActual=1){
+        botonAnteriorPagina.disabled = true;
     botonPrimeraPagina.disabled = true;
+    document.querySelector('.botones1').style.background = 'gray';
+    document.querySelector('.botones2').style.background = 'gray';
     botonSiguientePagina.disabled = false;
     botonUltimaPagina.disabled = false;
-    pedidoFetch(1);
+    document.querySelector('.botones3').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones4').style.background = 'rgb(92, 228, 103)';
+    }
+    else{
+        document.querySelector('.botones3').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones4').style.background = 'rgb(92, 228, 103)';
+    }
+    pedidoFetch(paginaActual);
+
 };
 
 function ultimaPagina(){
-    paginaActual=42
-    botonSiguientePagina.disabled = true;
+    if(paginaActual=42){
+        botonSiguientePagina.disabled = true;
     botonUltimaPagina.disabled = true;
-    botonAnteriorPagina.disabled = false;
-    botonPrimeraPagina.disabled = false;
+    document.querySelector('.botones3').style.background = 'gray';
+    document.querySelector('.botones4').style.background = 'gray';
+    }
+    else{
+        botonAnteriorPagina.disabled = false;
+        botonPrimeraPagina.disabled = false;
+        document.querySelector('.botones1').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones2').style.background = 'rgb(92, 228, 103)';
+    }
     pedidoFetch(paginaActual);
 }
+
 botonSiguientePagina.addEventListener('click',siguientePagina);
 botonAnteriorPagina.addEventListener('click',anteriorPagina);
 botonPrimeraPagina.addEventListener('click',primeraPagina);
-botonUltimaPagina.addEventListener('click', ultimaPagina)
+botonUltimaPagina.addEventListener('click', ultimaPagina);
+
+let total = totalPersonajes.length
+console.log(total)

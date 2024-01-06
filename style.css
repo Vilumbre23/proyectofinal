@@ -19,12 +19,12 @@ font-family: 'Shadows Into Light', cursive;
         display:grid;
         grid-template-columns: 1fr auto;
         align-items: center;
-        background: aliceblue;
+        background: rgb(222, 239, 255);
         font-family: sans-serif;
         position:absolute;
         top:0;
         width:100%;
-        height:40px;
+        height:100px;
         }
         /* CSS BOTON */
        .button1 {
@@ -44,6 +44,7 @@ font-family: 'Shadows Into Light', cursive;
           border-radius: 30%;
           color: var(--btn-bg-color);
           box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+        margin-right:20px;
         }
         
         .button1:hover {
@@ -55,14 +56,29 @@ font-family: 'Shadows Into Light', cursive;
           box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
         }
         /* MEDIA QUERIES los cambios que se aplican son por los botones de buttones, h1, y total personajes*/
+       
+        @media only screen and (max-width: 985px) {
+          .buttones {
+            margin-left: 30px;
+          }
+          #personajes{
+            margin-top:5px;
+          }
+          .total{
+            height:230px;
+          }
+          .total2{
+            margin-top:250px;
+          }
+        }
         @media only screen and (max-width: 705px) {
           .buttones {
-            margin-left:100px;
+            margin-left: 100px;
           }
         }
         @media only screen and (max-width: 880px) {
           .buttones {
-            margin-left:100px;
+            margin-left: 100px;
           }
           .total{
             display:grid;
@@ -92,7 +108,7 @@ font-family: 'Shadows Into Light', cursive;
 
         /*MEDIA QUERYS*/
         /*button2*/
-        .botones {
+         .botones1, .botones2, .botones3, .botones4{
           padding: 10px 20px;
           border: none;
           font-size: 30px;
@@ -105,12 +121,12 @@ font-family: 'Shadows Into Light', cursive;
           transition-property: box-shadow;
         }
         
-        .botones {
+        .botones1, .botones2, .botones3, .botones4{
           background: rgb(92, 228, 103);
           box-shadow: 0 0 25px rgb(125, 100, 238);
         }
         
-        .botones:hover {
+        .botones1:hover, .botones2:hover, .botones3:hover, .botones4:hover{
           box-shadow: 0 0 5px rgb(93, 155, 152),
                       0 0 25px rgb(33, 36, 33),
                       0 0 50px rgb(93, 192, 209),
@@ -122,40 +138,49 @@ font-family: 'Shadows Into Light', cursive;
           box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
           transform: scale(1.05) rotate(-1deg);
         }
-        .person{
-            margin-top:100px;
-                  }
-                  .total2{
-                    margin-left:30px;
-                  }
         /* media query, arreglando person, total personajes. */
-        @media only screen and (max-width: 821px) {
-          .person {
-            margin-top:250px;        
-            }
+
+        @media only screen and (max-width: 670px) {
+          .total{
+            height:210px;
+          }
+        }
+        @media only screen and (max-width: 669px) {
+          .total{
+            height:300px;
+          }
+
         }
         @media only screen and (max-width: 335px) {
-          .person {
-            margin-top:340px;        
+
+            .total{
+              height:300px;
             }
         }
         @media only screen and (max-width: 314px) {
-          .person {
-            margin-top:380px;        
+
+            .total{
+              height:500px;
             }
         }
-        @media only screen and (max-width: 294px) {
-          .person {
-            margin-top:450px;        
+        @media only screen and (max-width: 313px) {
+            .total{
+              height:400px;
             }
         }
+        @media only screen and (max-width: 200px) {
+            .total{
+              height:470px;
+            }
+        }
+        
         /*fin media */
         #personajes {
             display:grid;
             padding: 10px;
             grid-template-columns: repeat(4, 1fr);
           grid-gap:30px;
-         align-items: center;  
+         align-items: center;
         }
 
      /*AGREGADO/   /*AGREGADO/   /*AGREGADO/*/
@@ -198,8 +223,9 @@ border-width:3px;
       }
       .datos{
         margin-left:20px;
-        font-size:14px;
+        font-size:10px;
         font-family: 'Saira Semi Condensed', sans-serif;
+        margin-bottom:10px;
       }
   a{ 
     justify-content: center;
@@ -224,10 +250,12 @@ font-size: 25px;
     } 
     /*fin media queries*/
               /*AGREGADO/*/
-          .total2{
-            margin-bottom:30px;
-            margin-top:100px;
-            
+            .person{
+              margin-top:150px;  
+            }          
+              .total2{
+            margin-bottom:20px;
+            margin-left:30px; 
           }
           .pagifoot{
             margin-top:70px;

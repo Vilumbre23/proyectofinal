@@ -17,6 +17,10 @@ let spanCantidadPersonajes = document.getElementById('cantidadPersonajes');
 let totalPersonajes;
 let paginaActual=1;
 
+const botonModalCentro = document.querySelector("#boton-modal-centro");
+const modalCentro = document.querySelector("#modal-centro");
+const cerrarModalCentro = document.querySelector("#cerrar-modal-centro");
+
 // funcion para mostrar los personajes en el html
 function mostrarEnElHtml (arrPersonajes) {
     let numeroPersonajes = arrPersonajes.length;
@@ -37,22 +41,25 @@ function mostrarEnElHtml (arrPersonajes) {
                                         <p>Species: ${itemPersonaje.species}</p>
                                         <p>Origen: ${itemPersonaje.origin.name}</p>
                                         <p>Locacion: ${itemPersonaje.location.name}</p>
-                                        
                                         </div>  
                                         </strong>
                                         <hr>
-                                        <div>
-                                        <a href="https://rickandmortyapi.com/api/character/${itemPersonaje.id}" target= "_blank">Ver mas</a>
-                                        </div>                                     
+                                        <br>
+                                        <div class="botones">
+                                        <button class="boton" id="boton-modal-centro">Ver mas</button>
                                         </div>
-                                        </div>`
-                                        
+                                        <div class="modal-centro" id="modal-centro">
+                                        <h2>Esto es un modal</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae aliquid optio dignissimos quia quas itaque quaerat aperiam placeat nihil odio fuga, accusamus doloribus porro veritatis tempore, eaque tenetur sequi.</p>
+                                        <button class="boton cerrar" id="cerrar-modal-centro">Cerrar</button>
+                                         </div>
+                                        <br>
+                                        </div>`;
                                     })
                                     raiz.innerHTML = divPersonajes;
-                                    
                                 }
 
-
+                                
 // pedido de info con fetch
 function pedidoFetch (pagina) {
     fetch('https://rickandmortyapi.com/api/character/?page='+pagina)
@@ -66,7 +73,6 @@ function pedidoFetch (pagina) {
 };
 
 pedidoFetch(paginaActual);
-
 
 // Eventos
 // 1- Nos traemos el elemento html que queremos agregarle el evento
@@ -205,6 +211,14 @@ botonSiguientePagina.addEventListener('click',siguientePagina);
 botonAnteriorPagina.addEventListener('click',anteriorPagina);
 botonPrimeraPagina.addEventListener('click',primeraPagina);
 botonUltimaPagina.addEventListener('click', ultimaPagina);
+
+botonModalCentro.addEventListener("click", () => {
+    modalCentro.classList.add("active");
+}) 
+
+cerrarModalCentro.addEventListener("click", () => {
+    modalCentro.classList.remove("active");
+})
 
 let total = totalPersonajes.length
 console.log(total)

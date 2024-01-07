@@ -82,7 +82,7 @@ font-family: 'Shadows Into Light', cursive;
           }
           .total{
             display:grid;
-        grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 2fr;            
           }
         }
         @media only screen and (max-width: 359px) {
@@ -306,3 +306,48 @@ font-size: 25px;
       }
       
       /* TERMINA FOOTER*/
+      /*MODAL*/
+      /* .botones {
+        display: flex;
+        gap: 1rem;
+    } */
+    
+    /* .boton {
+        border: 0;
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+        padding: .75em 1em;
+        border-radius: 500vmax;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: .75rem;
+    } */
+    
+    .boton.cerrar {
+        background-color: var(--clr-red);
+    }
+    
+    .modal-centro {
+        position: fixed;
+        width: 40%;
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+        padding: 2rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(.5);
+        transition: .3s;
+        box-shadow: 0 0 0 500vmax rgba(0, 0 ,0, .5);
+    }
+    
+    .modal-centro.active {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    

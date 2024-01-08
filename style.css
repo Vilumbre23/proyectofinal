@@ -307,4 +307,40 @@ border-width:3px;
       }
       
       /* TERMINA FOOTER*/
+      .search-page {
+        margin-top: 0px;
+        margin-left:90%;
+        padding-right: 75px;
+      }
+      
+      .search-page #page-input {
+        width: 3rem;
+        height: 1.5rem;
+        border: 2px solid #077a12;
+        border-radius: 5px;
+        text-align: center;
+      }
+      
+      .search-page #page-input:focus {
+        border: none;
+        box-shadow: #0bca1e;
+      }
+      
+      .search-page #go-to-page {
+        width: 3rem;
+        height: 1.5rem;
+        background-color: #077a12;
+        color: #fff;
+        border: 1px solid #077a12;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      .search-page .highlight-text,
+      .characters .highlight-text {
+        text-shadow: 2px 2px 0 #c6edc6, -2px -2px 0 #c6edc6, 2px -2px 0 #c6edc6,
+          -2px 2px 0 #c6edc6;
+      }
       

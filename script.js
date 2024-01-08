@@ -1,3 +1,22 @@
+let inputPagina = document.getElementById('page-input');
+let botonIrPagina = document.getElementById('go-to-page');
+
+botonIrPagina.addEventListener('click', function() {
+    let nuevaPagina = parseInt(inputPagina.value);
+    if (nuevaPagina >= 1 && nuevaPagina <= 42) {
+        paginaActual = nuevaPagina;
+        actualizarPagina();
+    } else {
+        alert('Número de página no válido. Debe estar entre 1 y 42.');
+    }
+});
+
+function actualizarPagina() {
+    // Actualizar la interfaz de usuario, deshabilitar/enabled los botones según sea necesario
+    // Llamar a pedidoFetch(paginaActual) u otra lógica necesaria para mostrar la nueva página.
+    pedidoFetch(paginaActual);
+}
+
 // elementos del HTML
 let divPersonajes = document.getElementById('personajes');
 

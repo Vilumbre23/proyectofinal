@@ -179,12 +179,13 @@ font-family: 'Shadows Into Light', cursive;
             display:grid;
             padding: 10px;
             grid-template-columns: repeat(4, 1fr);
-          grid-gap:30px;
-         align-items: center;
+            grid-gap:30px;
+            align-items: center;
         }
 
      /*AGREGADO/   /*AGREGADO/   /*AGREGADO/*/
         .personaje{
+          align-self: stretch;
 border-color: rgb(37, 228, 116);
 border-style: solid;
 border-radius: 30px;
@@ -223,7 +224,7 @@ border-width:3px;
       }
       .datos{
         margin-left:20px;
-        font-size:10px;
+        font-size:15px;
         font-family: 'Saira Semi Condensed', sans-serif;
         margin-bottom:10px;
       }
@@ -233,8 +234,8 @@ border-width:3px;
     margin-left:10px;
     font-family: sans-serif;
     text-decoration: none;
-font-family: 'Shadows Into Light', cursive;
-font-size: 25px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
     }
     /*media queries arreglandoproblema de cartas,para que se ponga en 2 columas, y 1 columna*/
     @media only screen and (max-width: 600px) {
@@ -306,48 +307,4 @@ font-size: 25px;
       }
       
       /* TERMINA FOOTER*/
-      /*MODAL*/
-      /* .botones {
-        display: flex;
-        gap: 1rem;
-    } */
-    
-    /* .boton {
-        border: 0;
-        background-color: var(--clr-black);
-        color: var(--clr-white);
-        padding: .75em 1em;
-        border-radius: 500vmax;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-weight: 800;
-        font-size: .75rem;
-    } */
-    
-    .boton.cerrar {
-        background-color: var(--clr-red);
-    }
-    
-    .modal-centro {
-        position: fixed;
-        width: 40%;
-        background-color: var(--clr-black);
-        color: var(--clr-white);
-        padding: 2rem;
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        visibility: hidden;
-        opacity: 0;
-        transform: scale(.5);
-        transition: .3s;
-        box-shadow: 0 0 0 500vmax rgba(0, 0 ,0, .5);
-    }
-    
-    .modal-centro.active {
-        transform: scale(1);
-        opacity: 1;
-        visibility: visible;
-    }
-    
+      

@@ -91,7 +91,18 @@ font-family: 'Shadows Into Light', cursive;
             flex-wrap: wrap;                        
           }
           .buttones{
-            margin-left:10px;
+            margin-left:40px;
+          }
+        } 
+        @media only screen and (max-width: 335px) {
+          
+          .totalabinbu{
+            margin-top:350px;
+          }
+        } 
+        @media only screen and (max-width: 333px) {
+          h1{
+                margin-left:10px;                  
           }
         } 
         @media only screen and (max-width: 333px) {
@@ -104,7 +115,53 @@ font-family: 'Shadows Into Light', cursive;
             transition: linear;
           }
         }
+    /* media query, arreglando person, total personajes. */
 
+    @media only screen and (max-width: 670px) {
+      .total{
+        height:210px;
+      }
+      .person{
+        margin-top:400px;
+      }
+    }
+    @media only screen and (max-width: 577px) {
+      .total{
+        height:240px;
+      }
+  }
+  @media only screen and (max-width: 502px) {
+    .total{
+      height:250px;
+    }
+    .total2{
+      margin-top:290px;
+    }
+        }
+    @media only screen and (max-width: 335px) {
+
+        .total{
+          height:300px;
+        }
+    }
+    @media only screen and (max-width: 314px) {
+
+        .total{
+          height:500px;
+        }
+    }
+    @media only screen and (max-width: 313px) {
+        .total{
+          height:400px;
+        }
+    }
+    @media only screen and (max-width: 200px) {
+        .total{
+          height:470px;
+        }
+    }
+    
+    /*fin media */
 
         /*MEDIA QUERYS*/
         /*button2*/
@@ -138,43 +195,6 @@ font-family: 'Shadows Into Light', cursive;
           box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
           transform: scale(1.05) rotate(-1deg);
         }
-        /* media query, arreglando person, total personajes. */
-
-        @media only screen and (max-width: 670px) {
-          .total{
-            height:210px;
-          }
-        }
-        @media only screen and (max-width: 669px) {
-          .total{
-            height:300px;
-          }
-
-        }
-        @media only screen and (max-width: 335px) {
-
-            .total{
-              height:300px;
-            }
-        }
-        @media only screen and (max-width: 314px) {
-
-            .total{
-              height:500px;
-            }
-        }
-        @media only screen and (max-width: 313px) {
-            .total{
-              height:400px;
-            }
-        }
-        @media only screen and (max-width: 200px) {
-            .total{
-              height:470px;
-            }
-        }
-        
-        /*fin media */
         #personajes {
             display:grid;
             padding: 10px;
@@ -309,29 +329,30 @@ border-width:3px;
       /* TERMINA FOOTER*/
       .search-page {
         margin-top: 0px;
-        margin-left:90%;
+        margin-left:80%;
         padding-right: 75px;
+        margin-right:10px;
       }
       
       .search-page #page-input {
         width: 3rem;
         height: 1.5rem;
-        border: 2px solid #077a12;
+        border: 2px solid #5babc4;
         border-radius: 5px;
         text-align: center;
       }
       
       .search-page #page-input:focus {
         border: none;
-        box-shadow: #0bca1e;
+        box-shadow: #5babc4;
       }
       
       .search-page #go-to-page {
         width: 3rem;
         height: 1.5rem;
-        background-color: #077a12;
+        background-color: #5babc4;
         color: #fff;
-        border: 1px solid #077a12;
+        border: 1px solid #5babc4;
         border-radius: 5px;
         font-weight: bold;
         cursor: pointer;
@@ -340,17 +361,51 @@ border-width:3px;
       
       .search-page .highlight-text,
       .characters .highlight-text {
-        text-shadow: 2px 2px 0 #c6edc6, -2px -2px 0 #c6edc6, 2px -2px 0 #c6edc6,
-          -2px 2px 0 #c6edc6;
+        text-shadow: 2px 2px 0 #dfeaee, -2px -2px 0 #e6eff1, 2px -2px 0 #cee4eb,
+          -2px 2px 0 #dde6e9;
       }
+
+      
       /*pagina vermas*/
       #vermas-personaje {
         display:flex;
         padding: 10px;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 200px;
+        margin-left:40%;
+        flex-wrap: wrap;
       }
       .img2{
         width: 350px;
         height:100px;
+      }
+      @media only screen and (max-width: 985px) {
+        #vermas-personaje{
+          margin-top:300px;
+          margin-left:200px;
+        }
+      }
+      @media only screen and (max-width: 670px) {
+        #vermas-personaje{
+          margin-top:300px;
+          margin-left:100px;
+        }
+      }
+      @media only screen and (max-width: 530px) {
+        #vermas-personaje{
+          margin-top:300px;
+          margin-left:50px;
+        }
+      }
+      @media only screen and (max-width: 414px) {
+        #vermas-personaje{
+          margin-top:300px;
+          margin-left:20px;
+        }
+      }
+      @media only screen and (max-width: 375px) {
+        #vermas-personaje{
+          margin-top:300px;
+          margin-left:0px;
+        }
       }

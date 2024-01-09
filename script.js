@@ -242,3 +242,8 @@ botonUltimaPagina.addEventListener('click', ultimaPagina);
 
 let total = totalPersonajes.length
 console.log(total)
+
+function recargar() {
+    window.location.reload();
+    
+  }

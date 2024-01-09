@@ -6,11 +6,10 @@
 body{
   background-image: linear-gradient(aliceblue, rgb(146, 200, 236)); 
 }
-h1{
-    font-size: 50px;
-    font-weight:black;
+.titulo{
     margin-left:40px;
-font-family: 'Shadows Into Light', cursive;
+    width:300px;
+    height:100px;
     }
     img{
         width:100%;
@@ -56,60 +55,91 @@ font-family: 'Shadows Into Light', cursive;
           box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
         }
         /* MEDIA QUERIES los cambios que se aplican son por los botones de buttones, h1, y total personajes*/
-       
-        @media only screen and (max-width: 985px) {
-          .buttones {
-            margin-left: 30px;
-          }
-          #personajes{
-            margin-top:5px;
-          }
-          .total{
-            height:230px;
-          }
-          .total2{
-            margin-top:250px;
-          }
-        }
-        @media only screen and (max-width: 705px) {
-          .buttones {
-            margin-left: 100px;
-          }
-        }
-        @media only screen and (max-width: 880px) {
-          .buttones {
-            margin-left: 100px;
-          }
-          .total{
-            display:grid;
-            grid-template-columns: 1fr 2fr;            
-          }
-        }
-        @media only screen and (max-width: 359px) {
+        @media only screen and (max-width: 1010px) {
           .total{
             display:flex;
-            flex-wrap: wrap;                        
+            flex-direction: column;
+            height:170px;
+          }
+        }
+        @media only screen and (max-width: 1010px) {
+          .totalabinbu{
+            margin-top:200px;
+          }
+        }
+        @media only screen and (max-width: 653px) {
+          .totalabinbu{
+            margin-top:250px;
+          }
+          .total{
+            height:220px;
           }
           .buttones{
-            margin-left:40px;
+            margin-left:50px;
           }
-        } 
-        @media only screen and (max-width: 335px) {
-          
+        }
+        @media only screen and (max-width: 420px) {
           .totalabinbu{
-            margin-top:350px;
+            margin-top:310px;
           }
-        } 
-        @media only screen and (max-width: 333px) {
-          h1{
-                margin-left:10px;                  
+          .total{
+            height:266px;
           }
-        } 
-        @media only screen and (max-width: 333px) {
-          h1{
-                margin-left:10px;                  
+          .buttones{
+            margin-left:50px;
           }
-        } 
+        }
+        @media only screen and (max-width: 374px) {
+          .titulo{
+            margin-left:20px;
+            width:250px;
+            height:100px;
+          }
+          .totalabinbu{
+            display:flex;
+            flex-direction: column;
+            margin-right:100px;
+          }
+        }
+        @media only screen and (max-width: 370px) {
+          .totalabinbu{
+            margin-top:300px;
+          }
+          .total{
+            height:270px;
+          }
+        }
+        @media only screen and (max-width: 324px) {
+          .totalabinbu{
+            margin-top:330px;
+          }
+          .total{
+            height:310px;
+          }
+        }
+        @media only screen and (max-width: 284px) {
+          .totalabinbu{
+            margin-top:370px;
+          }
+          .total{
+            height:360px;
+          }
+        }
+        @media only screen and (max-width: 270px) {
+          .titulo{
+            width:200px;
+            height:100px;
+          }
+          .buttones{
+            display:grid;
+          }
+          .total{
+            height:360px;
+          }
+          .totalabinbu{
+            margin-top:400px;
+          }
+        }
         @media (prefers-reduced-motion: reduce) {
           button {
             transition: linear;
@@ -117,50 +147,7 @@ font-family: 'Shadows Into Light', cursive;
         }
     /* media query, arreglando person, total personajes. */
 
-    @media only screen and (max-width: 670px) {
-      .total{
-        height:210px;
-      }
-      .person{
-        margin-top:400px;
-      }
-    }
-    @media only screen and (max-width: 577px) {
-      .total{
-        height:240px;
-      }
-  }
-  @media only screen and (max-width: 502px) {
-    .total{
-      height:250px;
-    }
-    .total2{
-      margin-top:290px;
-    }
-        }
-    @media only screen and (max-width: 335px) {
 
-        .total{
-          height:300px;
-        }
-    }
-    @media only screen and (max-width: 314px) {
-
-        .total{
-          height:500px;
-        }
-    }
-    @media only screen and (max-width: 313px) {
-        .total{
-          height:400px;
-        }
-    }
-    @media only screen and (max-width: 200px) {
-        .total{
-          height:470px;
-        }
-    }
-    
     /*fin media */
 
         /*MEDIA QUERYS*/
@@ -243,6 +230,12 @@ border-width:3px;
          
       }
       .datos{
+        margin-left:20px;
+        font-size:15px;
+        font-family: 'Saira Semi Condensed', sans-serif;
+        margin-bottom:10px;
+      }
+      .datos2{
         margin-left:20px;
         font-size:15px;
         font-family: 'Saira Semi Condensed', sans-serif;
@@ -397,15 +390,54 @@ border-width:3px;
           margin-left:50px;
         }
       }
-      @media only screen and (max-width: 414px) {
+      @media only screen and (max-width: 456px) {
         #vermas-personaje{
-          margin-top:300px;
-          margin-left:20px;
+          margin-left:10px;
         }
       }
-      @media only screen and (max-width: 375px) {
+      @media only screen and (max-width: 385px) {
         #vermas-personaje{
           margin-top:300px;
           margin-left:0px;
         }
+        .person1{
+            width:300px;
+            margin-left:30px;
+        }
+        .img2{
+          width:300px;
+        }
       }
+      @media only screen and (max-width: 373px) {
+        #vermas-personaje{
+          margin-top:300px;
+          margin-left:0px;
+        }
+        .person1{
+            width:250px;
+            margin-left:30px;
+        }
+        .img2{
+          width:250px;
+        }
+      }
+      @media only screen and (max-width: 326px) {
+        #vermas-personaje{
+          margin-top:300px;
+          margin-left:0px;
+        }
+        .person1{
+            width:150px;
+            margin-left:10px;
+        }
+        .img2{
+          width:150px;
+        }
+      }
+      @media only screen and (max-width: 284px) {
+        #vermas-personaje{
+          margin-top:350px;
+          margin-left:0px;
+        }
+      }
+

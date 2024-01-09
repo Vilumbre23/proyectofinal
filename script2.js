@@ -6,7 +6,7 @@ function mostrarEnElHtml(personaje) {
             <div class="card-image">
                 <img class="img2" src=${personaje.image}>
             </div>
-            <div class="datos">
+            <div class="datos2">
                 <p>Id: ${personaje.id}</p>
                 <p>Nombre: ${personaje.name}</p>
                 <p>Genero: ${personaje.gender}</p>
@@ -46,3 +46,7 @@ function pedidoFetch(id) {
 
 // Llamar a la función con el id de la página
 pedidoFetch(id);
+function recargar() {
+    
+    window.location.reload();
+}

@@ -2,6 +2,7 @@ let inputPagina = document.getElementById('page-input');
 let botonIrPagina = document.getElementById('go-to-page');
 
 botonIrPagina.addEventListener('click', function() {
+    console.log('Button clicked!');
     let nuevaPagina = parseInt(inputPagina.value);
     if (nuevaPagina >= 1 && nuevaPagina <= 42) {
         paginaActual = nuevaPagina;
@@ -12,8 +13,36 @@ botonIrPagina.addEventListener('click', function() {
 });
 
 function actualizarPagina() {
-    // Actualizar la interfaz de usuario, deshabilitar/enabled los botones según sea necesario
-    // Llamar a pedidoFetch(paginaActual) u otra lógica necesaria para mostrar la nueva página.
+
+    if (paginaActual === 1) {
+        botonPrimeraPagina.disabled = true;
+        botonAnteriorPagina.disabled = true;
+        botonUltimaPagina.disabled = false;  
+        botonSiguientePagina.disabled = false; 
+        document.querySelector('.botones3').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones4').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones1').style.background = 'gray';
+        document.querySelector('.botones2').style.background = 'gray';
+    } else if (paginaActual === 42) {
+        botonSiguientePagina.disabled = true;
+        botonUltimaPagina.disabled = true;
+        document.querySelector('.botones3').style.background = 'gray';
+        document.querySelector('.botones4').style.background = 'gray';
+        botonPrimeraPagina.disabled = false;  
+        botonAnteriorPagina.disabled = false;
+        document.querySelector('.botones1').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones2').style.background = 'rgb(92, 228, 103)';
+    } else {
+        botonPrimeraPagina.disabled = false;
+        botonAnteriorPagina.disabled = false;
+        botonSiguientePagina.disabled = false;
+        botonUltimaPagina.disabled = false;
+        document.querySelector('.botones1').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones2').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones3').style.background = 'rgb(92, 228, 103)';
+        document.querySelector('.botones4').style.background = 'rgb(92, 228, 103)';
+    }
+    
     pedidoFetch(paginaActual);
 }
 
@@ -123,9 +152,6 @@ function filtrounknown () {
     mostrarEnElHtml(unknown);
 }
 
-
-
-
 // Crear evento
 // elementoHTML.addEventListener('tipo de evento', funcion que se ejecuta cuando se da el evento)
 botonFiltroMujer.addEventListener('click',filtroMujer);
@@ -138,8 +164,6 @@ botonPrimeraPagina.disabled=true;
 botonAnteriorPagina.disabled=true;
 document.querySelector('.botones1').style.background = 'gray';
 document.querySelector('.botones2').style.background = 'gray';
-
-
 
 // function controlPaginado (pagina){
 // // agregar los controles de todas las situaciones posibles
@@ -180,41 +204,37 @@ function anteriorPagina(){
     pedidoFetch(paginaActual);
 };
 
-function primeraPagina(){
-    if(paginaActual=1){
-        botonAnteriorPagina.disabled = true;
+function primeraPagina() {
+    paginaActual = 1;
+
+    botonAnteriorPagina.disabled = true;
     botonPrimeraPagina.disabled = true;
     document.querySelector('.botones1').style.background = 'gray';
     document.querySelector('.botones2').style.background = 'gray';
+
     botonSiguientePagina.disabled = false;
     botonUltimaPagina.disabled = false;
     document.querySelector('.botones3').style.background = 'rgb(92, 228, 103)';
-        document.querySelector('.botones4').style.background = 'rgb(92, 228, 103)';
-    }
-    else{
-        document.querySelector('.botones3').style.background = 'rgb(92, 228, 103)';
-        document.querySelector('.botones4').style.background = 'rgb(92, 228, 103)';
-    }
-    pedidoFetch(paginaActual);
+    document.querySelector('.botones4').style.background = 'rgb(92, 228, 103)';
 
-};
-
-function ultimaPagina(){
-    if(paginaActual=42){
-        botonSiguientePagina.disabled = true;
-    botonUltimaPagina.disabled = true;
-    document.querySelector('.botones3').style.background = 'gray';
-    document.querySelector('.botones4').style.background = 'gray';
-    }
-    else{
-        botonAnteriorPagina.disabled = false;
-        botonPrimeraPagina.disabled = false;
-        document.querySelector('.botones1').style.background = 'rgb(92, 228, 103)';
-        document.querySelector('.botones2').style.background = 'rgb(92, 228, 103)';
-    }
     pedidoFetch(paginaActual);
 }
 
+function ultimaPagina() {
+    paginaActual = 42;
+
+    botonSiguientePagina.disabled = true;
+    botonUltimaPagina.disabled = true;
+    document.querySelector('.botones3').style.background = 'gray';
+    document.querySelector('.botones4').style.background = 'gray';
+
+    botonAnteriorPagina.disabled = false;
+    botonPrimeraPagina.disabled = false;
+    document.querySelector('.botones1').style.background = 'rgb(92, 228, 103)';
+    document.querySelector('.botones2').style.background = 'rgb(92, 228, 103)';
+
+    pedidoFetch(paginaActual);
+}
 botonSiguientePagina.addEventListener('click',siguientePagina);
 botonAnteriorPagina.addEventListener('click',anteriorPagina);
 botonPrimeraPagina.addEventListener('click',primeraPagina);

@@ -89,7 +89,7 @@ function mostrarEnElHtml (arrPersonajes) {
                                         </strong>
                                         <hr>
                                         <br>
-                                        <a href="vermas.html" target="_blank">Ver mas</a>
+                                        <a href="vermas.html?id=${itemPersonaje.id}" target="_blank">Ver mas</a>
                                         <br>
                                         </div>`;
                                     })

@@ -343,4 +343,14 @@ border-width:3px;
         text-shadow: 2px 2px 0 #c6edc6, -2px -2px 0 #c6edc6, 2px -2px 0 #c6edc6,
           -2px 2px 0 #c6edc6;
       }
-      
+      /*pagina vermas*/
+      #vermas-personaje {
+        display:flex;
+        padding: 10px;
+        align-items: center;
+        margin-top: 100px;
+      }
+      .img2{
+        width: 350px;
+        height:100px;
+      }
